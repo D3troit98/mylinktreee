@@ -12,7 +12,7 @@ const App = () => {
       <Links />
       <div className="code">
         <img src={slack} alt="slack_logo" className="slack_logo" />
-        <a href="https://github.com/detroit/linktree">
+        <a href="https://github.com/D3troit98/mylinktreee.git">
           <img src={github} alt="github_link" className="source_code" />
         </a>
       </div>
