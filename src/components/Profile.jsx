@@ -11,7 +11,7 @@ const Profile = () => {
         <img src={shareIcon} alt="share_icon" className="share-icon" />
         <img src={toolTip} alt="tooltip" className="tool-tip" />
       </div>
-      <span id="slack">@Ebuka Duruaku</span>
+      <span id="slack">@duruakuebuka</span>
     </div>
   );
 };
