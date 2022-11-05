@@ -1,5 +1,5 @@
 import React from "react";
-import { pic, shareIcon, shareDots, toolTip } from "../assets";
+import { pic, shareIcon, shareDots, toolTip } from "../../assets";
 
 const Profile = () => {
   return (
