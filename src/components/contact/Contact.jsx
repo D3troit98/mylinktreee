@@ -2,24 +2,25 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Footer from "../home/Footer";
 import "./contact.scss";
-export default function Contact() {
+const Contact = () => {
+  const [userContact, setUserContact] = useState({
+    agree: true,
+    email: "",
+    firstName: "",
+    lastName: "",
+    message: "",
+  });
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  //const [focus, setFocus] = useState(false)
 
   const onSubmit = (data) => {
-    console.log(data);
+    setUserContact(data);
+    console.log(userContact);
   };
-
-  /*const changeFocus = () => {
-    setFocus(true)
-  }
-  const inputStyle = (input2) => {
-      return {border: input2 ? '1px solid red': '1px solid #D0D5DD', outline: focus ? input2? '0.1rem solid red': "0.1rem solid #84caff" : 0}
-  }*/
 
   return (
     <div id="contact-page">
@@ -125,8 +126,10 @@ export default function Contact() {
           </button>
         </form>
       </main>
-
+      <div className="line" />
       <Footer />
     </div>
   );
-}
+};
+
+export default Contact;

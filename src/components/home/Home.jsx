@@ -15,7 +15,7 @@ const Home = () => {
           <img src={github} alt="github_link" className="source_code" />
         </a>
       </div>
-
+      <div className="line" />
       <Footer />
     </>
   );
