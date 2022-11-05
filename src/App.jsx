@@ -1,25 +1,18 @@
 import React from "react";
-import { slack, github } from "./assets";
-import Footer from "./components/Footer";
-import Links from "./components/Links";
-import Profile from "./components/Profile";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.scss";
+import Home from "./components/home/Home";
+import Contact from "./components/contact/Contact";
 const App = () => {
   return (
     <div className="app_container">
-      <Profile />
-
-      <Links />
-      <div className="code">
-        <img src={slack} alt="slack_logo" className="slack_logo" />
-        <a href="https://github.com/D3troit98/mylinktreee.git">
-          <img src={github} alt="github_link" className="source_code" />
-        </a>
-      </div>
-
-      <div className="line" />
-
-      <Footer />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
